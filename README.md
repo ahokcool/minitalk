@@ -1,5 +1,13 @@
 # astein | minitalk
 
+## Install
+
+`git clone --recurse-submodule https://github.com/ahokcool/minitalk.git`
+
+## Test
+
+`make test`
+
 ## Connection Procedure
 to get more of an binary vibe I renamed the signals...<br />
    ```USR1``` = ```BIT_0```<br />
