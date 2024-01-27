@@ -11,7 +11,7 @@ DEBUG = 0
 # Compiler options
 CC = cc
 CFLAGS = -D DEBUG=$(DEBUG) -Wall -Werror -Wextra #-g -fsanitize=address -fsanitize-address-use-after-scope
-CLIBS = -L$(LIB_FOLDER) -lft_printf -lm
+CLIBS = -L$(LIB_FOLDER) -lft -lm
 CINCLUDES  = -I$(INCLUDE_FOLDER) 
 RM = rm -f
 
