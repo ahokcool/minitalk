@@ -58,7 +58,7 @@ $(OBJS_CLIENT): $(SRC_FOLDER)client.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(LIBFT):
-	@$(MAKE) --no-print-directory -C $(LIBFT_FOLDER) DEBUG=$(DEBUG)
+	@$(MAKE) --no-print-directory -C $(LIBFT_FOLDER)
 
 clean:
 	@$(RM) $(OBJS_SERVER)
