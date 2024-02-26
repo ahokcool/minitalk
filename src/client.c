@@ -6,7 +6,7 @@
 /*   By: astein <astein@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 16:56:29 by astein            #+#    #+#             */
-/*   Updated: 2023/07/28 23:45:55 by astein           ###   ########.fr       */
+/*   Updated: 2024/02/26 23:27:14 by astein           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,6 +136,7 @@ static void	ini_client(int argc, char **argv)
 	g_client.found_server = ft_false;
 	g_client.transmitting = ft_false;
 	put_header_client();
+	sigemptyset(&signal_action.sa_mask);
 	signal_action.sa_flags = SA_SIGINFO;
 	signal_action.sa_sigaction = handle_response;
 	sigaction(BIT_0, &signal_action, NULL);

@@ -6,7 +6,7 @@
 /*   By: astein <astein@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 16:51:32 by astein            #+#    #+#             */
-/*   Updated: 2024/01/27 21:45:07 by astein           ###   ########.fr       */
+/*   Updated: 2024/02/26 23:28:20 by astein           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -162,6 +162,7 @@ int	main(void)
 
 	g_client_pid = 0;
 	put_header_server();
+	sigemptyset(&signal_action.sa_mask);
 	signal_action.sa_handler = 0;
 	signal_action.sa_flags = SA_SIGINFO | SA_NODEFER;
 	signal_action.sa_sigaction = handler;
