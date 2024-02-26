@@ -1,4 +1,0 @@
-
-[submodule "lib"]
-	path = lib
-	url = git@github.com:ahokcool/libft-getnextline-printf.git
