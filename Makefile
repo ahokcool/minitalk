@@ -61,6 +61,7 @@ $(LIBFT):
 	@$(MAKE) --no-print-directory -C $(LIBFT_FOLDER)
 
 clean:
+	@make --no-print-directory -C $(LIBFT_FOLDER) clean
 	@$(RM) $(OBJS_SERVER)
 	@$(RM) $(OBJS_CLIENT)
 	@$(BANNER) $(NAME) "removed object files" "$(RED)"
