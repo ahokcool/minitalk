@@ -22,39 +22,30 @@
   </a>
   <h1 align="center">minitalk</h1>
 <p align="center">
-    Createing a communication program in the form of a client and server using UNIX signals.
+    Create a communication programme in the form of a client and a server using UNIX signals.
 </p>
 </div>
 <br>
 <!-- PROJECT HEADER END -->
 
 ## :bulb: Lessons learned
-- working with the API of [a graphics library](https://github.com/42Paris/minilibx-linux)
-- understanding points in 2 and 3 dimensional space, vectors and trigonometric functions
-- [Bresenham's line algorithm](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm)
-- Using a [rotation matrix](https://en.wikipedia.org/wiki/Rotation_matrix) to transform coordinates
+- UNIX Signals
+- C signal handling
 
 ## Installation
 ```
-$ git clone --recurse-submodules https://github.com/ahokcool/fdf.git)   # Clone
-$ cd fdf                                                                # Change directory
-$ make                                                                  # Compile
-$ ./fdf map_file                                                        # Run
+$ git clone --recurse-submodule https://github.com/ahokcool/minitalk.git  # Clone
+$ cd minitalk                                                             # Change directory
+$ make                                                                    # Compile
+$ ./server                                                                # Start server
+$ ./client "Message" <PID of Server>                                      # Send Messages
 ```
 
-
-# astein | minitalk
-
-## Install
-
-`git clone --recurse-submodule https://github.com/ahokcool/minitalk.git`
-
 ## Test
-
 `make test`
 
 ## Connection Procedure
-to get more of an binary vibe I renamed the signals...<br />
+To get more of an binary vibe I renamed the signals...<br />
    ```USR1``` = ```BIT_0```<br />
    ```USR2``` = ```BIT_1```<br />
 | Step																				| Client->Server					 				| Server->Client					|
@@ -66,7 +57,13 @@ to get more of an binary vibe I renamed the signals...<br />
 
 ☝️only if all characters of the message have been transmitted and the client recives the ```BIT_1``` signal from the server it prints ```SUCCESS```!
 
+This allows multiple clients to connect to the server at the same time:
 
+<p align="center">
+ <a href="./">
+  <img src="images/twoclients.gif" alt="Logo" width="600">
+ </a>
+</p>
 
 <!-- ahokcool FOOTER-->
 ---
